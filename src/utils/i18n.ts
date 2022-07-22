@@ -5,10 +5,12 @@ import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 import ko from '../../assets/locales/ko/translation.json';
 
-const resources = {
+export const resources = {
   en: {translation: en},
   ko: {translation: ko},
 };
+
+export const defaultNS = 'translation';
 
 // don't want to use this?
 // have a look at the Quick start guide
@@ -30,6 +32,8 @@ i18n
     fallbackLng: 'en',
     debug: true,
     supportedLngs: ['en', 'ko'],
+    ns: ['translation'],
+    defaultNS,
     load: 'languageOnly',
     nonExplicitSupportedLngs: true,
     interpolation: {

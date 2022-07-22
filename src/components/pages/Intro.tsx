@@ -79,7 +79,7 @@ function Intro(): ReactElement {
           testID="SIGN_IN"
           imgSrc={IC_GOOGLE_W}
           isLoading={isLoggingIn}
-          onClick={(): void => onLogin()}
+          onClick={onLogin}
           text={t('sign_in')}
         />
         <Button
