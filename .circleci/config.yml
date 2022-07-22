@@ -1,0 +1,63 @@
+version: 2
+jobs:
+  node:
+    working_directory: ~/dooboo
+    docker:
+      - image: circleci/node:12
+        environment:
+          TZ: 'Asia/Seoul'
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+
+      - restore_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+
+      - run: yarn install
+
+      - save_cache:
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+          paths:
+            - ~/.cache/yarn
+
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+          paths:
+            - node_modules
+
+      - persist_to_workspace:
+          root: ~/dooboo
+          paths:
+            - node_modules
+
+      - run:
+          name: Lint Test
+          working_directory: .
+          command: |
+            yarn lint
+
+      - run:
+          name: Typescript Test
+          working_directory: .
+          command: |
+            yarn tsc
+
+      - run:
+          name: Vitest Test
+          command: |
+            mkdir -p coverage
+            yarn test
+
+      - store_test_results:
+          path: coverage
+
+      - store_artifacts:
+          path: coverage
+
+workflows:
+  version: 2
+  node:
+    jobs:
+      - node
