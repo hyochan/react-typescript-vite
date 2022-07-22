@@ -1,9 +1,9 @@
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import en from '../../assets/locales/en/translation.json';
+import en from '../../assets/locales/en.json';
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
-import ko from '../../assets/locales/ko/translation.json';
+import ko from '../../assets/locales/ko.json';
 
 export const resources = {
   en: {translation: en},
