@@ -4,7 +4,6 @@
 import {VitePWA} from 'vite-plugin-pwa';
 import babel from 'vite-plugin-babel';
 import {defineConfig} from 'vite';
-import path from 'path';
 import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/

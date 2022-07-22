@@ -7,6 +7,7 @@
 
 - [react](https://github.com/facebook/react)
 - [react-router](https://github.com/ReactTraining/react-router)
+- [react-i18next](https://react.i18next.com)
 - [typescript](https://github.com/Microsoft/TypeScript)
 - [emotion](https://emotion.sh)
 - [react-testing-library](https://github.com/kentcdodds/react-testing-library)
@@ -181,6 +182,10 @@ const component = (props): React.ReactElement => {
 
 ### Localization
 
+We use [react-i18next](https://react.i18next.com) for translation. This is configured in [src/utils/i18n.ts](https://github.com/hyochan/react-vite-ts/blob/main/src/utils/i18n.ts).
+
+Read more about the [configuration options](https://www.i18next.com/overview/configuration-options).
+
 
 ### Creating components
 
@@ -196,11 +201,3 @@ dooboo page [PageComponentName]
 # ui component
 dooboo ui [UIComponentName]
 ```
-
-### React version
-
-17
-
-### Typescript
-
-4
