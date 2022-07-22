@@ -14,12 +14,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "typeRoots": ["./@types", "./node_modules/@types"]
+    "jsx": "react-jsx"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": ["node_modules", "**/*.spec.tsx", "**/*.test.tsx"],
+  "typeRoots": ["./@types", "./node_modules/@types"],
   "types": ["typePatches"],
   "files": ["environment.d.ts"]
 }

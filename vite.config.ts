@@ -10,18 +10,18 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [
     react(),
-    babel({
-      babelConfig: {
-        babelrc: false,
-        configFile: false,
-        presets: [
-          '@babel/preset-env',
-          '@babel/preset-react',
-          '@babel/preset-typescript',
-        ],
-        plugins: ['@emotion', '@babel/plugin-transform-runtime'],
-      },
-    }),
+    // babel({
+    //   babelConfig: {
+    //     babelrc: false,
+    //     configFile: false,
+    //     presets: [
+    //       '@babel/preset-env',
+    //       '@babel/preset-react',
+    //       '@babel/preset-typescript',
+    //     ],
+    //     plugins: ['@emotion', '@babel/plugin-transform-runtime'],
+    //   },
+    // }),
     VitePWA({injectRegister: 'auto'}),
   ],
 });

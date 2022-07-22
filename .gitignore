@@ -1,10 +1,7 @@
 .DS_Store
 node_modules/
 build
-/dist/*
-!/dist/*.html
-!/dist/manifest.json
-!/dist/favicon.ico
+dist
 coverage/
 package-lock.json
 .env
