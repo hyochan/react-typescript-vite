@@ -13,17 +13,21 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+
       - name: Install modules
-        run: YARN_CHECKSUM_BEHAVIOR=update yarn --immutable
+        run: pnpm install
 
       - name: Check linting
-        run: yarn lint
+        run: pnpm lint
 
       - name: Build typescript
-        run: yarn tsc
+        run: pnpm tsc
 
       - name: Test
-        run: yarn test --coverage
+        run: pnpm test -- --coverage
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2

@@ -9,6 +9,7 @@ import styled from '@emotion/styled';
 import {useNavigate} from 'react-router-dom';
 import {useRecoilState} from 'recoil';
 import {useThemeContext} from '../../providers/ThemeProvider';
+import {useTranslation} from 'react-i18next';
 import {userRecoilState} from '../../recoil/atoms';
 
 const Container = styled.div`
@@ -50,6 +51,7 @@ function Intro(): ReactElement {
   const [_, setUser] = useRecoilState(userRecoilState);
   const {changeThemeType} = useThemeContext();
   const [isLoggingIn, setIsLoggingIn] = useState(false);
+  const {t} = useTranslation();
 
   const onLogin = (): void => {
     setIsLoggingIn(true);
@@ -77,17 +79,17 @@ function Intro(): ReactElement {
           testID="SIGN_IN"
           imgSrc={IC_GOOGLE_W}
           isLoading={isLoggingIn}
-          onClick={(): void => onLogin()}
-          // text={<fbt desc="sign in">Sign In</fbt>}
+          onClick={onLogin}
+          text={t('sign_in')}
         />
         <Button
           onClick={(): void => navigate('/temp', {})}
-          // text={<fbt desc="navigate">Navigate</fbt>}
+          text={t('navigate')}
         />
         <Button
           testID="CHANGE_THEME"
           onClick={(): void => changeThemeType()}
-          // text={<fbt desc="change theme">Change theme</fbt>}
+          text={t('change_theme')}
         />
       </ButtonWrapper>
     </Container>
