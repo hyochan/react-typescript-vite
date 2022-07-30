@@ -23,7 +23,4 @@ export default defineConfig({
     // }),
     VitePWA({injectRegister: 'auto'}),
   ],
-  resolve: {
-    preserveSymlinks: true,
-  },
 });
