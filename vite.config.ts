@@ -2,7 +2,6 @@
 /// <reference types="vite/client" />
 
 import {VitePWA} from 'vite-plugin-pwa';
-import babel from 'vite-plugin-babel';
 import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -24,4 +23,7 @@ export default defineConfig({
     // }),
     VitePWA({injectRegister: 'auto'}),
   ],
+  resolve: {
+    preserveSymlinks: true,
+  },
 });
