@@ -1,18 +1,8 @@
-import {CSSProperties, ReactElement} from 'react';
+import {CSSProperties, Component, FC, ReactElement} from 'react';
 
 import ButtonLoading from './ButtonLoading';
 import {ButtonPrimary} from '../Styles';
 import styled from '@emotion/styled';
-
-interface Props {
-  testID?: string;
-  id?: string;
-  style?: CSSProperties;
-  imgSrc?: string;
-  text?: string | ReactElement;
-  onClick?: () => void;
-  isLoading?: boolean;
-}
 
 const ButtonWrapper = styled.div`
   flex: 1;
@@ -38,7 +28,23 @@ const LogoImg = styled.img`
   object-fit: cover;
 `;
 
-function Button(props: Props): ReactElement {
+type PropsType<C> = C extends Component<infer P>
+  ? P
+  : C extends FC<infer P>
+  ? P
+  : never;
+
+export type ButtonProps = PropsType<typeof Button>;
+
+const Button: FC<{
+  testID?: string;
+  id?: string;
+  style?: CSSProperties;
+  imgSrc?: string;
+  text?: string | ReactElement;
+  onClick?: () => void;
+  isLoading?: boolean;
+}> = (props) => {
   const {testID, onClick, imgSrc, text, style, isLoading} = props;
 
   return (
@@ -53,7 +59,7 @@ function Button(props: Props): ReactElement {
       )}
     </ButtonPrimary>
   );
-}
+};
 
 Button.defaultProps = {
   style: {display: 'flex', height: '60px'},

@@ -1,4 +1,4 @@
-import {ReactElement, useState} from 'react';
+import {FC, useState} from 'react';
 
 import Button from '../uis/Button';
 import {IC_GOOGLE_W} from '../../utils/Icons';
@@ -44,7 +44,7 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-function Intro(): ReactElement {
+const Intro: FC = () => {
   // eslint-disable-next-line
   let timer: any;
   const navigate = useNavigate();
@@ -94,6 +94,6 @@ function Intro(): ReactElement {
       </ButtonWrapper>
     </Container>
   );
-}
+};
 
 export default Intro;
