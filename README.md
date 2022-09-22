@@ -31,6 +31,22 @@
 - [Light Mode]
   ![image](https://user-images.githubusercontent.com/27461460/58620232-8f116a80-8301-11e9-8b55-3bb2a743dff8.png)
 
+
+### Tips
+
+> Setting up yarn berry
+
+1. `yarn set version berry`
+1. `yarn`
+1. `yarn dlx @yarnpkg/sdks vscode`
+1. `yarn plugin import typescript`
+1. `yarn dlx @yarnpkg/pnpify --sdk vscode`
+   - Useful when prettier extension is not working. After running this it is recommended to run below command again.
+
+     ```sh
+     yarn dlx @yarnpkg/sdks vscode
+     ```
+
 ### Structures
 
 ```text
