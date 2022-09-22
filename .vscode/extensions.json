@@ -4,5 +4,6 @@
     "dbaeumer.vscode-eslint",
     "wix.vscode-import-cost",
     "amatiasq.sort-imports",
+    "arcanis.vscode-zipfs"
   ]
 }
