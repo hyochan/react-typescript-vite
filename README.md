@@ -1,7 +1,7 @@
 # React with vite and typescript
 
-[![CI](https://github.com/hyochan/react-vite-ts/actions/workflows/ci.yml/badge.svg)](https://github.com/hyochan/react-vite-ts/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/hyochan/react-vite-ts/branch/main/graph/badge.svg)](https://codecov.io/gh/hyochan/react-vite-ts)
+[![CI](https://github.com/hyochan/react-typescript-vite/actions/workflows/ci.yml/badge.svg)](https://github.com/hyochan/react-typescript-vite/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/hyochan/react-typescript-vite/branch/main/graph/badge.svg)](https://codecov.io/gh/hyochan/react-typescript-vite)
 
 > Specification
 
