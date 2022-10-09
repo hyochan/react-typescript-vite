@@ -40,12 +40,8 @@
 1. `yarn`
 1. `yarn dlx @yarnpkg/sdks vscode`
 1. `yarn plugin import typescript`
-1. `yarn dlx @yarnpkg/sdks --sdk vscode`
-   - Useful when prettier extension is not working. After running this it is recommended to run below command again.
-
-     ```sh
-     yarn dlx @yarnpkg/sdks vscode
-     ```
+1. `yarn dlx @yarnpkg/sdks vscode`
+   - Useful when prettier extension is not working.
 
 ### Structures
 
