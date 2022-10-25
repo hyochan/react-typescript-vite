@@ -82,13 +82,10 @@ const Intro: FC = () => {
           onClick={onLogin}
           text={t('sign_in')}
         />
-        <Button
-          onClick={(): void => navigate('/temp', {})}
-          text={t('navigate')}
-        />
+        <Button onClick={() => navigate('/temp', {})} text={t('navigate')} />
         <Button
           testID="CHANGE_THEME"
-          onClick={(): void => changeThemeType()}
+          onClick={() => changeThemeType()}
           text={t('change_theme')}
         />
       </ButtonWrapper>
