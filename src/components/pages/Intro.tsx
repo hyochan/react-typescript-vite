@@ -1,7 +1,5 @@
-import type {FC} from 'react';
-import {useState} from 'react';
-
 import Button from '../uis/Button';
+import type {FC} from 'react';
 import {IC_GOOGLE_W} from '../../utils/Icons';
 import type {User} from '../../types';
 import UserCard from '../uis/UserCard';
@@ -9,6 +7,7 @@ import {device} from '../../theme';
 import styled from '@emotion/styled';
 import {useNavigate} from 'react-router-dom';
 import {useRecoilState} from 'recoil';
+import {useState} from 'react';
 import {useThemeContext} from '../../providers/ThemeProvider';
 import {useTranslation} from 'react-i18next';
 import {userRecoilState} from '../../recoil/atoms';
