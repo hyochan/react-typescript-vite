@@ -82,7 +82,7 @@ const Intro: FC = () => {
           onClick={onLogin}
           text={t('sign_in')}
         />
-        <Button onClick={() => navigate('/temp', {})} text={t('navigate') } />
+        <Button onClick={() => navigate('/temp', {})} text={t('navigate')} />
         <Button
           testID="CHANGE_THEME"
           onClick={() => changeThemeType()}
