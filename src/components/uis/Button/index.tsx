@@ -41,7 +41,7 @@ const Button: FC<{
   id?: string;
   style?: CSSProperties;
   imgSrc?: string;
-  text?: string | ReactElement;
+  text?: string | ReactElement | null;
   onClick?: () => void;
   isLoading?: boolean;
 }> = (props) => {
