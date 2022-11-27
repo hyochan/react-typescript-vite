@@ -2,8 +2,8 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 import React from 'react';
 import type {ReactElement} from 'react';
-import RootProvider from '../src/providers';
-import type {ThemeType} from '../src/types';
+import RootProvider from '../../src/providers';
+import type {ThemeType} from '../../src/types';
 
 export const createTestElement = (
   child: ReactElement,

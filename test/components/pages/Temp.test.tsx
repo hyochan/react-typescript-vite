@@ -1,11 +1,11 @@
 import * as renderer from 'react-test-renderer';
 
-import type {RenderResult} from '@testing-library/react';
 import {fireEvent, render} from '@testing-library/react';
 
 import React from 'react';
-import Temp from '../Temp';
-import {createTestElement} from '../../../../test/testUtils';
+import type {RenderResult} from '@testing-library/react';
+import Temp from '../../../src/components/pages/Temp';
+import {createTestElement} from '../../../test/utils/testUtils';
 
 const props = {};
 const component = createTestElement(<Temp {...props} />);
