@@ -1,16 +1,17 @@
-import Button from '../uis/Button';
 import type {FC} from 'react';
-import {IC_GOOGLE_W} from '../../utils/Icons';
-import type {User} from '../../types';
-import UserCard from '../uis/UserCard';
-import {device} from '../../theme';
-import styled from '@emotion/styled';
-import {useNavigate} from 'react-router-dom';
-import {useRecoilState} from 'recoil';
 import {useState} from 'react';
-import {useThemeContext} from '../../providers/ThemeProvider';
 import {useTranslation} from 'react-i18next';
+import {useNavigate} from 'react-router-dom';
+import styled from '@emotion/styled';
+import {useRecoilState} from 'recoil';
+
+import {useTheme} from '../../providers/ThemeProvider';
 import {userRecoilState} from '../../recoil/atoms';
+import {device} from '../../theme';
+import type {User} from '../../types';
+import {IC_GOOGLE_W} from '../../utils/Icons';
+import Button from '../uis/Button';
+import UserCard from '../uis/UserCard';
 
 const Container = styled.div`
   display: flex;
@@ -45,11 +46,10 @@ const ButtonWrapper = styled.div`
 `;
 
 const Intro: FC = () => {
-  // eslint-disable-next-line
   let timer: any;
   const navigate = useNavigate();
   const [_, setUser] = useRecoilState(userRecoilState);
-  const {changeThemeType} = useThemeContext();
+  const {changeThemeType} = useTheme();
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const {t} = useTranslation();
 
@@ -84,7 +84,7 @@ const Intro: FC = () => {
         />
         <Button onClick={() => navigate('/temp', {})} text={t('navigate')} />
         <Button
-          testID="CHANGE_THEME"
+          testID="change-theme"
           onClick={() => changeThemeType()}
           text={t('change_theme')}
         />

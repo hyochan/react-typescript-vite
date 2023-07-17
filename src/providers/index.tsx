@@ -1,7 +1,9 @@
 import type {ReactElement} from 'react';
 import {RecoilRoot} from 'recoil';
-import {ThemeProvider} from './ThemeProvider';
+
 import type {ThemeType} from '../types';
+
+import {ThemeProvider} from './ThemeProvider';
 
 interface Props {
   initialThemeType?: ThemeType;

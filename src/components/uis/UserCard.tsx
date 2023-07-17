@@ -1,8 +1,9 @@
 import type {ReactElement} from 'react';
-import {device} from '../../theme';
 import styled from '@emotion/styled';
 import {useRecoilValue} from 'recoil';
+
 import {userRecoilState} from '../../recoil/atoms';
+import {device} from '../../theme';
 
 const ContentWrapper = styled.div`
   display: flex;

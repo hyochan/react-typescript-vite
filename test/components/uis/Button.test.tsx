@@ -1,9 +1,9 @@
+import type {ReactElement} from 'react';
+import React from 'react';
 import * as renderer from 'react-test-renderer';
 
 import Button from '../../../src/components/uis/Button';
 import {IC_FACEBOOK_W} from '../../../src/utils/Icons';
-import React from 'react';
-import type {ReactElement} from 'react';
 
 // test for the pure component
 describe('[Button] shared component test', () => {

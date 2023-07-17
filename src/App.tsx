@@ -1,11 +1,12 @@
 import type {ReactElement} from 'react';
-import RootProvider from './providers';
-import SwitchNavigator from './components/navigations/SwitchNavigator';
 import {useEffect} from 'react';
-import {useThemeContext} from './providers/ThemeProvider';
+
+import SwitchNavigator from './components/navigations/SwitchNavigator';
+import {useTheme} from './providers/ThemeProvider';
+import RootProvider from './providers';
 
 function App(): ReactElement {
-  const {changeThemeType} = useThemeContext();
+  const {changeThemeType} = useTheme();
 
   useEffect(() => {
     (() => {

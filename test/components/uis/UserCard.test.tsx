@@ -1,6 +1,6 @@
+import React from 'react';
 import * as renderer from 'react-test-renderer';
 
-import React from 'react';
 import UserCard from '../../../src/components/uis/UserCard';
 import {createTestElement} from '../../utils/testUtils';
 

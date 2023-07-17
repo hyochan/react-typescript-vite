@@ -1,9 +1,8 @@
+import React from 'react';
 import * as renderer from 'react-test-renderer';
-
+import type {RenderResult} from '@testing-library/react';
 import {fireEvent, render} from '@testing-library/react';
 
-import React from 'react';
-import type {RenderResult} from '@testing-library/react';
 import Temp from '../../../src/components/pages/Temp';
 import {createTestElement} from '../../../test/utils/testUtils';
 

@@ -1,8 +1,9 @@
-import type {CSSProperties, Component, FC, ReactElement} from 'react';
+import type {Component, CSSProperties, FC, ReactElement} from 'react';
+import styled from '@emotion/styled';
+
+import {ButtonPrimary} from '../Styles';
 
 import ButtonLoading from './ButtonLoading';
-import {ButtonPrimary} from '../Styles';
-import styled from '@emotion/styled';
 
 const ButtonWrapper = styled.div`
   flex: 1;

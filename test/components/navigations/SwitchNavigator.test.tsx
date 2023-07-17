@@ -1,8 +1,9 @@
 import React from 'react';
 import type {RenderResult} from '@testing-library/react';
-import RootProvider from '../../../src/providers/index';
-import SwitchNavigator from '../../../src/components/navigations/SwitchNavigator';
 import {render} from '@testing-library/react';
+
+import SwitchNavigator from '../../../src/components/navigations/SwitchNavigator';
+import RootProvider from '../../../src/providers/index';
 
 const props = {};
 
